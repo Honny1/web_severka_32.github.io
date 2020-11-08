@@ -1,0 +1,39 @@
+{
+  "name": "web_severka_32.github.io",
+  "version": "1.0.0",
+  "description": "Stránky pionýrského oddílu 32. PTO Severka",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "autoprefixer": "postcss dist/css/main.css -u autoprefixer -r dist/css/main.css",
+    "imagemin": "imagemin src/images --out-dir=dist/images",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "watch:css": "onchange \"src/scss/*.scss\" -- npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DohnalMichal/web_severka_32.github.io.git"
+  },
+  "keywords": [
+    "Severka",
+    "Pionýr",
+    "32.",
+    "PTO"
+  ],
+  "author": "Michal Dohnal",
+  "license": "ISC", 
+  "bugs": {
+    "url": "https://github.com/DohnalMichal/web_severka_32.github.io/issues"
+  },
+  "homepage": "https://github.com/DohnalMichal/web_severka_32.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "imagemin-cli": "^6.0.0",
+    "node-sass": "^5.0.0",
+    "onchange": "^7.1.0",
+    "postcss": "^8.1.6",
+    "postcss-cli": "^8.2.0"
+  },
+  "dependencies": {}
+}

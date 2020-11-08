@@ -1,0 +1,46 @@
+.footer {
+  background-color: #fff;
+  padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-severka-logo {
+  width: 100px;
+}
+
+.footer-copy {
+  margin: 1em 0;
+  text-align: center;
+  p {
+    margin-top: .4em;
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.footer-phone-icon {
+  width: 25px;
+  margin-bottom: .5em;
+}
+
+
+.footer-sponsors {
+  width: 80%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1em;
+  img {
+    margin: 0 1em;
+  }
+}
