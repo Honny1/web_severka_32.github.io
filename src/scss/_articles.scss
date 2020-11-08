@@ -1,0 +1,77 @@
+.articles {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-primary);
+  padding-bottom: 5em;
+}
+
+.articles-main-title {
+  padding: 0.75em 0;
+  font-weight: 600;
+  font-size: 28px;
+  text-align: center;
+}
+
+.article-card {
+  width: 70%;
+  background-color: var(--background-secondary);
+  padding: 1.5em 3em;
+  margin-bottom: 2.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-header {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  margin-bottom: 1emv;
+}
+
+.article-title {
+  margin: 0 2em 0 0;
+}
+
+.article-date {
+  color: var(--gray-secondary);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.article-calendar-icon {
+  margin-right: 0.5em;
+  width: 15px;
+}
+
+.next-page {
+  align-self: flex-end;
+  margin-right: 20%;
+  padding: .375rem 1rem;
+  display: flex;
+  align-items: center;
+  img {
+    margin-left: 2em;
+    width: 25px;
+  }
+}
+
+/* --- media queries --- */
+@media only screen and (max-width: 600px) {
+  .article-card {
+    width: 90%;
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen and 
+  (min-device-width: 320px) and 
+  (max-device-width: 568px) and 
+  (-webkit-min-device-pixel-ratio: 2) {
+  .article-card {
+    padding: 1.5em;
+  }
+}

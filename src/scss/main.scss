@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* --- box sizing --- */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/* --- font --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* --- variables --- */
+:root {
+  --font-primary: #5f5f5f;
+  --font-secondary: #eaeaea;
+  --background-primary: #f7f7f7;
+  --background-secondary: #fff;
+  --gray-primary: #353535;
+  --gray-secondary: #5f5f5f;
+  --button-primary: #6291c7;
+  --button-primary-hover: #5b7da5;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+// Reseting paragraph margin by default
+p {
+  margin: 0;
+}
+
+
+
+/* --- imports --- */
+@import 'buttons';
+@import 'header';
+@import 'articles';
+@import 'footer';
