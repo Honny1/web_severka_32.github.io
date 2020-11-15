@@ -1,0 +1,92 @@
+$animate: all 0.2s ease-in-out;
+
+.sidenav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 220px;
+  background-color: var(--nav-background-color);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .links {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    a {
+      margin: 0.25em 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: var(--font-secondary);
+      // margin-top: 0.5em;
+      text-align: left;
+      font-weight: 300;
+      transition: $animate;
+      .hover {
+        font-size: 18px;
+        text-align: left;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -1px;
+          width: 0px;
+          height: 2px;
+          margin: 2px 0 0;
+          transition: $animate;
+          transition-duration: 0.5s;
+          opacity: 0;
+          background-color: darken(#8a8a8a, 5%);
+        }
+        &.hover {
+          &:before,
+          &:after {
+            left: 0;
+          }
+        }
+      }
+      &:hover {
+        color: var(--nav-text-hover);
+        cursor: pointer;
+        .hover {
+          &:before,
+          &:after {
+            width: 100%;
+            opacity: 1;
+          }
+        }
+        svg {
+          transition: $animate;
+          fill: var(--nav-text-hover);
+        }
+
+      }
+      svg {
+        transition: $animate;
+        fill: var(--font-secondary);
+        height: 25px;
+        width: 25px;
+        margin-top: -4px;
+        margin-right: .75em;
+      }
+    }
+  }
+}
+
+.sidenav-severka-logo {
+  margin-top: 2em;
+  width: 60%;
+  justify-self: center;
+}

@@ -10,9 +10,8 @@ html {
   box-sizing: inherit;
 }
 
-
 /* --- font --- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 :root {
   font-family: 'Open Sans', sans-serif;
@@ -28,6 +27,8 @@ html {
   --gray-secondary: #5f5f5f;
   --button-primary: #6291c7;
   --button-primary-hover: #5b7da5;
+  --nav-background-color: #353535;
+  --nav-text-hover: #8a8a8a;
 }
 
 
@@ -47,5 +48,6 @@ p {
 /* --- imports --- */
 @import 'buttons';
 @import 'header';
+@import 'nav';
 @import 'articles';
 @import 'footer';
