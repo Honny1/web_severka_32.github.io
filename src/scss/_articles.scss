@@ -27,7 +27,11 @@
   display: flex;
   align-items: center;
   flex-flow: row wrap;
-  margin-bottom: 1emv;
+  margin-bottom: 1em;
+}
+
+.article-card p {
+  margin-bottom: 0.5em;
 }
 
 .article-title {
@@ -43,12 +47,13 @@
 .article-calendar-icon {
   margin-right: 0.5em;
   width: 15px;
+  fill: var(--gray-secondary);
 }
 
 .next-page {
   align-self: flex-end;
   margin-right: 20%;
-  padding: .375rem 1rem;
+  padding: 0.375rem 1rem;
   display: flex;
   align-items: center;
   img {
@@ -67,10 +72,7 @@
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
-@media only screen and 
-  (min-device-width: 320px) and 
-  (max-device-width: 568px) and 
-  (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   .article-card {
     padding: 1.5em;
   }

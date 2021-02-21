@@ -4,9 +4,10 @@
   "description": "Stránky pionýrského oddílu 32. PTO Severka",
   "main": "app.js",
   "scripts": {
-    "clear-build-cache": "rm -rf .cache/ dist/",
+    "clear-build-cache": "rm -rf .cache/ dist/ build/",
     "remove-node-modules": "rm -rf node_modules",
     "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html -d build",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
@@ -49,7 +50,11 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
+    "react-moment": "^1.1.1"
   }
 }
