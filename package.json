@@ -4,7 +4,12 @@
   "description": "Stránky pionýrského oddílu 32. PTO Severka",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "clear-build-cache": "rm -rf .cache/ dist/ build/",
+    "remove-node-modules": "rm -rf node_modules",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html -d build",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "scss": "node-sass --output-style compressed -o dist/css src/scss",
     "autoprefixer": "postcss dist/css/main.css -u autoprefixer -r dist/css/main.css",
     "imagemin": "imagemin src/images --out-dir=dist/images",
@@ -22,7 +27,7 @@
     "PTO"
   ],
   "author": "Michal Dohnal",
-  "license": "ISC", 
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/DohnalMichal/web_severka_32.github.io/issues"
   },
@@ -33,7 +38,23 @@
     "node-sass": "^5.0.0",
     "onchange": "^7.1.0",
     "postcss": "^8.1.6",
-    "postcss-cli": "^8.2.0"
+    "postcss-cli": "^8.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "moment": "^2.29.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
+    "react-moment": "^1.1.1"
+  }
 }
