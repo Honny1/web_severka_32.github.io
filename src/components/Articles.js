@@ -1,6 +1,6 @@
 import React from "react";
 import Moment from "react-moment";
-import calendarIcon from "./icons/calendar.svg";
+import calendarIcon from "../icons/calendar.svg";
 import ReactMarkdown from "react-markdown";
 
 class Articles extends React.Component {
