@@ -8,7 +8,6 @@ import "regenerator-runtime/runtime"; // This needs to be here for async await t
 import Sidebar from "./navbar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-
 const App = () => {
   return (
     <>

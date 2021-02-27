@@ -58,7 +58,8 @@
     "react-markdown": "^5.0.3",
     "react-moment": "^1.1.1",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "stylish-sidebar": "^1.1.4"
   },
   "browserslist": {
     "production": [
