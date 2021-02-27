@@ -2,6 +2,17 @@ import React from "react";
 import Moment from "react-moment";
 import calendarIcon from "../icons/calendar.svg";
 import ReactMarkdown from "react-markdown";
+import styled from "styled-components";
+
+const ErrorMessage = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  padding-bottom: 2em;
+`
+
 
 class Articles extends React.Component {
   state = {
@@ -48,7 +59,12 @@ class Articles extends React.Component {
 
     // Print errors if any
     if (error) {
-      return <div>An error occured: {error.message}</div>;
+      return (
+        <ErrorMessage>
+          <h2>Error</h2>
+          <p>An error occured: {error.message}</p>
+        </ErrorMessage>
+      );
     }
 
     return (
