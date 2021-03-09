@@ -3,35 +3,45 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Global, css } from '@emotion/core';
 import styled from '@emotion/styled';
 
+import homeIcon from '../../icons/home.svg';
+import personIcon from '../../icons/user.svg';
+import infoIcon from '../../icons/info (1).svg';
+import calendarIcon from '../../icons/calendar.svg';
+import bookIcon from '../../icons/book (1).svg';
+import houseIcon from '../../icons/house.svg';
+import campIcon from '../../icons/camping.svg';
+import graduationIcon from '../../icons/graduate.svg';
+import forestIcon from '../../icons/forest.svg';
+import phoneIcon from '../../icons/phone.svg';
+import travelIcon from '../../icons/travel.svg';
 
-import { OutlineHome } from "react-icons/ai";
 
-const StylishSidebar = forwardRef((props, ref) => {
+
+const Sidebar = forwardRef((props, ref) => {
   const {
     header = {
       fullName: '32. PTO Severka',
       shortName: ''
     },
     menuItems = [
-      { name: 'Úvodní stránka', to: '/item1', icon: OutlineHome, subMenuItems: [] },
+      { name: 'Úvodní stránka', to: '/item1', icon: homeIcon, subMenuItems: [] },
       {
-        name: 'Kdo jsme', to: '/item2', icon: 'https://eugeville.files.wordpress.com/2015/03/plane.png',
-        subMenuItems: [
+        name: 'Kdo jsme', to: '/item2', icon: personIcon, subMenuItems: [
           { name: 'Historie', to: '/sub1' },
           { name: 'Pionýr', to: '/sub2' },
           { name: 'Tradice', to: '/sub3' },
           { name: 'PTO', to: '/' },
           { name: 'Vedoucí', to: '/' }]
       },
-      { name: 'Informace', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Plán akcí', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Kronika', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Klubovna', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Tábory', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Vzdělávání', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Naučná stezka', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Kontakty', to: '/', icon: OutlineHome, subMenuItems: [] },
-      { name: 'Kilometrovník', to: '/', icon: OutlineHome, subMenuItems: [] },
+      { name: 'Informace', to: '/', icon: infoIcon, subMenuItems: [] },
+      { name: 'Plán akcí', to: '/', icon: calendarIcon, subMenuItems: [] },
+      { name: 'Kronika', to: '/', icon: bookIcon, subMenuItems: [] },
+      { name: 'Klubovna', to: '/', icon: houseIcon, subMenuItems: [] },
+      { name: 'Tábory', to: '/', icon: campIcon, subMenuItems: [] },
+      { name: 'Vzdělávání', to: '/', icon: graduationIcon, subMenuItems: [] },
+      { name: 'Naučná stezka', to: '/', icon: forestIcon, subMenuItems: [] },
+      { name: 'Kontakty', to: '/', icon: phoneIcon, subMenuItems: [] },
+      { name: 'Kilometrovník', to: '/', icon: travelIcon, subMenuItems: [] },
     ],
     fonts = {
       header: 'Poppins',
@@ -72,12 +82,7 @@ const StylishSidebar = forwardRef((props, ref) => {
 
   // Set color palette (preset or custom)
   useLayoutEffect(() => {
-    const presetPalettesList = ['dejaVu', 'swampyGreen', 'pinkAndBlue', 'julyBlue', 'gothicDark', 'ashes', 'beaverBrown', 'oceanBlue', 'saltNPepper'];
-    if (presetPalette && presetPalettesList.indexOf(presetPalette) > -1) {
-      setPalette(Colors[`${presetPalette}`])
-    }
-
-    else Object.keys(currentPalette).length === 0 && setPalette(colorPalette);
+    Object.keys(currentPalette).length === 0 && setPalette(colorPalette);
   }, [colorPalette, currentPalette, presetPalette])
 
 
@@ -148,6 +153,7 @@ const StylishSidebar = forwardRef((props, ref) => {
 
     const subMenusCopy = JSON.parse(JSON.stringify(subMenusStates));
 
+    // eslint-disable-next-line no-prototype-builtins
     if (subMenusStates.hasOwnProperty(index)) {
       subMenusCopy[index]['isOpen'] = !subMenusStates[index]['isOpen']
       setSubmenus(subMenusCopy)
@@ -285,83 +291,8 @@ const StylishSidebar = forwardRef((props, ref) => {
   )
 });
 
-export default StylishSidebar
+export default Sidebar;
 
-
-const Colors = {
-  dejaVu: {
-    bgColor1: '#fc5296CC',
-    bgColor2: '#f67062CC',
-    fontColor: '#130f40',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#e17055',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  swampyGreen: {
-    bgColor1: '#0bab64CC',
-    bgColor2: '#3bb78fCC',
-    fontColor: '#162e27',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#7accb2',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  pinkAndBlue: {
-    bgColor1: '#7ee8faCC',
-    bgColor2: '#eec0c6CC',
-    fontColor: '#965d69',
-    fontColorSelected: '#211618',
-    dividerColor: '#e8d5d8',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  julyBlue: {
-    bgColor1: '#647deeCC',
-    bgColor2: '#7f53acCC',
-    fontColor: '#130f40',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#a98bc7',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  gothicDark: {
-    bgColor1: '#434343CC',
-    bgColor2: '#000000CC',
-    fontColor: 'rgba(161, 161, 161)',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#303030',
-    selectedBackgroundCollapsedMode: 'light'
-  },
-  ashes: {
-    bgColor1: '#e6eaf0CC',
-    bgColor2: '#B8C6DBCC',
-    fontColor: '#616469',
-    fontColorSelected: '#000000',
-    dividerColor: '#a4a7ab',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  beaverBrown: {
-    bgColor1: '#953b20CC',
-    bgColor2: '#570f0aCC',
-    fontColor: '#f0b2af',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#78403d',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  oceanBlue: {
-    bgColor1: '#0ABCF9CC',
-    bgColor2: '#2C69D1CC',
-    fontColor: '#023040',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#136d8a',
-    selectedBackgroundCollapsedMode: 'dark'
-  },
-  saltNPepper: {
-    bgColor1: '#5b6467CC',
-    bgColor2: '#2f4353CC',
-    fontColor: '#b0b0b0',
-    fontColorSelected: '#ffffff',
-    dividerColor: '#5e686b',
-    selectedBackgroundCollapsedMode: 'dark'
-  }
-}
 
 
 const SidebarContainer = styled.div`
@@ -437,8 +368,8 @@ const Text = styled.p`
 
 const Icon = styled.img`
   ${p => p.isSidebarOpen && `padding-right: 20px; transition: .2s ease-in padding-right`};
-  height: 16px;
-  width: 16px;
+  height: 20px;
+  width: 20px;
 `
 
 // Sub menu items -------------------------------------------------------------------------
