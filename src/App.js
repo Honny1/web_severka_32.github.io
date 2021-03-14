@@ -1,13 +1,9 @@
 import React from "react";
 import "./scss/main.scss";
 import "regenerator-runtime/runtime"; // This needs to be here for async await to work
-// import { useHistory } from "react-router-dom";
-// import StylishSidebar from "stylish-sidebar";
-import Sidebar from "./components/Navbar/Navbar";
+import Sidebar from "./components/Sidebar/Sidebar";
 import MainView from "./components/MainView/MainView";
 import * as s from "./App.styles";
-
-
 
 //Icons
 import homeIcon from "./icons/home.svg";
@@ -23,8 +19,6 @@ import phoneIcon from "./icons/phone.svg";
 import travelIcon from "./icons/travel.svg";
 
 const App = () => {
-  // const [isOpen, setIsOpen] = useState(true);
-
   const colorPalette = {
     bgColor1: "#353535",
     bgColor2: "#353535",
@@ -38,14 +32,6 @@ const App = () => {
     header: "Poppins",
     menu: "Poppins"
   };
-
-  // const headerImage = {
-  //   urlExpanded: "images/logo_expanded.png",
-  //   urlCollapsed: "images/logo_collapsed.png",
-  //   heightCollapsed: "22pt",
-  //   heightExpanded: "30pt",
-  //   align: "right"
-  // };
 
   const backgroundImage = {
     url: "",
@@ -107,41 +93,8 @@ const App = () => {
     }
   ];
 
-
-  // const history = useHistory();
-
-  // const handleMenuItemClick = (index) => {
-  //   history.push(menuItems[index].to);
-  // };
-
-  // const handleSubMenuItemClick = (menuItemIndex, subMenuItemIndex) => {
-  //   history.push(
-  //     `${menuItems[menuItemIndex].to}${menuItems[menuItemIndex].subMenuItems[subMenuItemIndex].to}`
-  //   );
-  // };
-
   return (
     <s.App>
-      {/* <Sidebar />
-       */}
-      {/* <StylishSidebar
-        backgroundImage={backgroundImage}
-        colorPalette={colorPalette}
-        useImageAsHeader={true}
-        headerImage={headerImage}
-        fonts={fonts}
-        menuItems={menuItems}
-        widthExpanded={"20%"}
-        widthCollapsed={"5%"}
-        minWidth={"80px"}
-        maxWidth={"280px"}
-        isOpen={isOpen}
-        showToggler={true}
-        onTogglerClick={() => setIsOpen(!isOpen)}
-        onHeaderClick={() => history.push("editor")}
-        onMenuItemClick={handleMenuItemClick}
-        onSubMenuItemClick={handleSubMenuItemClick}
-      /> */}
       <Sidebar
         backgroundImage={backgroundImage}
         sidebarHeader={sidebarHeader}

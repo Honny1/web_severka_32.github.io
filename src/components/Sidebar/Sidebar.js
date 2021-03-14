@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import * as s from './Navbar.styles';
+import * as s from './Sidebar.styles';
 
 const Sidebar = props => {
   const {
