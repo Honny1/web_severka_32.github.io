@@ -11,10 +11,11 @@ html {
 }
 
 /* --- font --- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 :root {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* --- variables --- */
@@ -31,7 +32,6 @@ html {
   --nav-text-hover: #8a8a8a;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -43,11 +43,9 @@ p {
   margin: 0;
 }
 
-
-
 /* --- imports --- */
-@import 'buttons';
-@import 'header';
-@import 'nav';
-@import 'articles';
-@import 'footer';
+@import "buttons";
+@import "header";
+@import "nav";
+@import "articles";
+@import "footer";
