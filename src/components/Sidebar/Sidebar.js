@@ -7,7 +7,7 @@ const Sidebar = props => {
   const {
     backgroundImage = '',
     sidebarHeader = {
-      fullName: '',
+      fullName: '32. PTO Severka',
       shortName: ''
     },
     menuItems = [],
@@ -182,7 +182,15 @@ const Sidebar = props => {
 
   return (
     <s.SidebarContainer backgroundImage={backgroundImage} isSidebarOpen={isSidebarOpen} colorPalette={colorPalette}>
-      <s.SidebarHeader font={fonts.header}>{header}</s.SidebarHeader>
+      <s.SidebarHeader font={fonts.header}>
+        {header}
+        {
+          (header === '') ?
+            <img src={require("../../images/Severka-logo.png")} alt="Logo Severky" width="55px" /> :
+            <div></div>
+        }
+
+      </s.SidebarHeader>
       <s.MenuItemContainer>{menuItemsJSX}</s.MenuItemContainer>
       <s.TogglerContainer onClick={() => setSidebarState(!isSidebarOpen)}>
         <s.Toggler />

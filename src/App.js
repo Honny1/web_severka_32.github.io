@@ -19,30 +19,6 @@ import phoneIcon from "./icons/phone.svg";
 import travelIcon from "./icons/travel.svg";
 
 const App = () => {
-  const colorPalette = {
-    bgColor1: "#353535",
-    bgColor2: "#353535",
-    fontColor: "rgba(161, 161, 161)",
-    fontColorSelected: "rgba(255, 255, 255)",
-    dividerColor: "rgba(48, 48, 48)",
-    selectedBackgroundCollapsedMode: "light"
-  };
-
-  const fonts = {
-    header: "Poppins",
-    menu: "Poppins"
-  };
-
-  const backgroundImage = {
-    url: "",
-    showImage: false
-  };
-
-  const sidebarHeader = {
-    fullName: "32. PTO Severka",
-    shortName: ""
-  };
-
   const menuItems = [
     {
       name: "Úvodní stránka",
@@ -96,11 +72,7 @@ const App = () => {
   return (
     <s.App>
       <Sidebar
-        backgroundImage={backgroundImage}
-        sidebarHeader={sidebarHeader}
         menuItems={menuItems}
-        fonts={fonts}
-        colorPalette={colorPalette}
       />
       <MainView />
     </s.App>
